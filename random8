@@ -1,0 +1,74 @@
+function random(){
+    let b = Math.random();
+    let a = 1;
+    if(b<0.125){
+            a = 1;
+        }else{
+            let m = 0;
+        }
+    
+    if(b<0.25){
+        if(b>0.125){
+            a = 2;
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    if(b<0.375){
+        if(b>0.25){
+            a = 3;
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    if(b<0.5){
+        if(b>0.375){
+            a = 4;
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    if(b<0.625){
+        if(b>0.5){
+            a = 5;
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    if(b<0.75){
+        if(b>0.625){
+            a = 6;
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    if(b<0.875){
+        if(b>0.75){
+            a = 7;
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    if(b<1){
+        if(b>0.875){
+            a = 8;
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    return a;
+}
