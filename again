@@ -1,0 +1,4 @@
+function update(top, left, width, height){
+    let w = randomeight();
+    addf(a[w][0], a[w][1], a[w][2], top, left, width, height);
+}
