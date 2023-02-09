@@ -1,0 +1,9 @@
+function z(a, top, left, width, height){
+ a.style.position="absolute";
+    a.style.top= top + "px";
+    a.style.left=left + "px";
+    a.style.backgroundColor="blue";
+    a.style.width= width + "px";
+    a.style.height = height + "px";
+    document.body.appendChild(a);
+}
