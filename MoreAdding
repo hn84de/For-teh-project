@@ -1,0 +1,6 @@
+function addf(a, b, c, top, left, width, height){
+    let fdsa = rands();
+    z(a, top, left+fdsa[0], width, height);
+    z(b, top, left+fdsa[1], width, height);
+    z(c, top, left+fdsa[2], width, height);
+}
