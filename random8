@@ -1,4 +1,4 @@
-function random(){
+function randomeight(){
     let b = Math.random();
     let a = 1;
     if(b<0.125){
