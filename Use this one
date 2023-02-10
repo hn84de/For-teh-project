@@ -482,3 +482,5 @@ yui.style.innerHTML = score;
     yui.style.backgroundColor="black";
     yui.style.color="red";
     
+yui.style.fontSize="32px";
+
