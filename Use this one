@@ -242,9 +242,9 @@ function z(a, top, left, width, height){
 }
 function addf(a, b, c, top, left, width, height){
     let fdsa = rands();
-    z(a, top, left+fdsa[0], width, height);
-    z(b, top, left+fdsa[1], width, height);
-    z(c, top, left+fdsa[2], width, height);
+    z(a, top, left+2*fdsa[0]-40, width, height);
+    z(b, top, left+2*fdsa[1]-40, width, height);
+    z(c, top, left+2*fdsa[2]-40, width, height);
 }
 function update(top, left, width, height){
     let w = randomeight();
@@ -456,4 +456,14 @@ function fdg(){
             a[i][j].innerHTML = fdsk[i][j][random3()-1];
         }
     }
+}
+h.style.width="590px";
+h.style.top="240px";
+h.style.height = "240px";
+
+for(let i =0; i< 8; i++){
+        for(let j = 0; j<3; j++){
+            a[i][j].style.height="160px";
+            a[i][j].style.width="180px";
+        }
 }
