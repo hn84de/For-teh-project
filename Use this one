@@ -257,14 +257,17 @@ switch(event.keyCode){
     case 49:
         score += clickone;
         update(500, 500, 90, 90);
+        yui.innerHTML=score;
         break;
     case 50:
         score += clicktwo;
         update(500, 500, 90, 90);
+        yui.innerHTML=score;
         break;
     case 51:
         score += clickthree;
         update(500, 500, 90, 90);
+        yui.innerHTML=score;
         break;
     default: 
         break;
@@ -467,3 +470,15 @@ for(let i =0; i< 8; i++){
             a[i][j].style.width="180px";
         }
 }
+var yui = document.createElement("div");
+   yui.style.position="absolute";
+    yui.style.top= "100px";
+    yui.style.left="100px";
+    yui.style.width= "290px";
+    yui.style.height = "80px";
+yui.style.innerHTML = score;
+    document.body.appendChild(yui);
+    yui.style.color="black";
+    yui.style.backgroundColor="black";
+    yui.style.color="red";
+    
