@@ -253,21 +253,25 @@ function update(top, left, width, height){
     fdg();
 }
 document.addEventListener("keypress", function(event){
+chco();
 switch(event.keyCode){
     case 49:
         score += clickone;
         update(500, 500, 90, 90);
         yui.innerHTML=score;
+        chco();
         break;
     case 50:
         score += clicktwo;
         update(500, 500, 90, 90);
         yui.innerHTML=score;
+        chco();
         break;
     case 51:
         score += clickthree;
         update(500, 500, 90, 90);
         yui.innerHTML=score;
+        chco();
         break;
     default: 
         break;
@@ -483,4 +487,6 @@ yui.style.innerHTML = score;
     yui.style.color="red";
     
 yui.style.fontSize="32px";
-
+function chco(){
+document.body.style.backgroundColor="rgb(" + Math.round(255*Math.random()) + ", " + Math.round(255*Math.random()) + ", " + Math.round(255*Math.random()) + ")";
+}
