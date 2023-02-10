@@ -25,4 +25,5 @@ let a = 1;
     }else{
         let m = 0;
     }
+    return a;
 }
