@@ -1,3 +1,8 @@
+var w_W__5 = document.querySelector("body").childNodes.length;
+for(let i = 0; i< w_W__5; i++){
+    let abc = document.querySelector("body").childNodes[0];
+    abc.remove();
+}
 var h = document.createElement("div");
     h.style.position="absolute";
     h.style.top= "400px";
@@ -202,6 +207,7 @@ function z(a, top, left, width, height){
  let b = Math.random();
     if(b<0.333){
             a.style.backgroundColor="red";
+            a.style.color="green";
         }else{
             let m = 0;
         }
@@ -209,6 +215,7 @@ function z(a, top, left, width, height){
     if(b<0.666){
         if(b>0.333){
             a.style.backgroundColor="green";
+            a.style.color="red";
         }else{
             let m = 0;
         }
@@ -218,6 +225,7 @@ function z(a, top, left, width, height){
     if(b<1.1){
         if(b>0.666){
             a.style.backgroundColor="blue";
+            a.style.color="orange";
         }else{
             let m = 0;
         }
