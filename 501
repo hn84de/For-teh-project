@@ -1,0 +1,448 @@
+var h = document.createElement("div");
+    h.style.position="absolute";
+    h.style.top= "400px";
+    h.style.left="600px";
+    h.style.width= "290px";
+    h.style.height = "80px";
+    document.body.appendChild(h);
+function random3(){
+let b = Math.random();
+let a = 1;
+    if(b<0.333){
+            a = 1;
+        }else{
+            let m = 0;
+        }
+    
+    if(b<0.666){
+        if(b>0.333){
+            a = 2;
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    if(b<1.1){
+        if(b>0.666){
+            a = 3;
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    return a;
+}
+var clickone = -1;
+var clicktwo = -1;
+var clickthree = 1;
+var score = 0;
+var a = [];
+for(let i = 0; i< 8; i++){
+    a[i] = [];
+    for(let j = 0; j< 3; j++){
+        a[i][j] = document.createElement("div");
+        a[i][j].innerHTML = i + "," + j;
+    }}
+    
+    function randomeight(){
+    let b = Math.random();
+    let a = 1;
+    if(b<0.125){
+            a = 1;
+        }else{
+            let m = 0;
+        }
+    
+    if(b<0.25){
+        if(b>0.125){
+            a = 2;
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    if(b<0.375){
+        if(b>0.25){
+            a = 3;
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    if(b<0.5){
+        if(b>0.375){
+            a = 4;
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    if(b<0.625){
+        if(b>0.5){
+            a = 5;
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    if(b<0.75){
+        if(b>0.625){
+            a = 6;
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    if(b<0.875){
+        if(b>0.75){
+            a = 7;
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    if(b<1){
+        if(b>0.875){
+            a = 8;
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    return a;
+}
+
+function rands(){
+    let b = Math.random();
+let a = 100;
+    if(b<0.333){
+            a = 100;
+            clickone = 1;
+        clicktwo = -1;
+            clickthree = -1;
+        }else{
+            let m = 0;
+        }
+    
+    if(b<0.666){
+        if(b>0.333){
+            a = 200;
+            clickone = -1;
+            clicktwo = 1;
+            clickthree = -1;
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    if(b<1.1){
+        if(b>0.666){
+            a = 300;
+            clickone = -1;
+            clicktwo = -1;
+            clickthree = 1;
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    var d = 200;
+    var e = 300;
+    var r = Math.random();
+    switch(a){
+        case 100:
+            if(r<0.5){
+                d = 200;
+                e = 300;
+            }else{
+                d = 300;
+                e = 200;
+    }
+            break;
+        case 200:
+            if(r<0.5){
+                d = 100;
+                e = 300;
+            }else{
+                d = 300;
+                e = 100;
+    }
+            break;
+        case 300:
+            if(r<0.5){
+                d = 200;
+                e = 100;
+            }else{
+                d = 100;
+                e = 200;
+    }
+            break;
+        default:
+            break;
+    }
+            var f = [];
+            f[0] = a;
+            f[1] = d;
+            f[2] = e;
+            return f;
+}
+function z(a, top, left, width, height){
+    a.style.backgroundColor="blue";
+ let b = Math.random();
+    if(b<0.333){
+            a.style.backgroundColor="red";
+        }else{
+            let m = 0;
+        }
+    
+    if(b<0.666){
+        if(b>0.333){
+            a.style.backgroundColor="green";
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    if(b<1.1){
+        if(b>0.666){
+            a.style.backgroundColor="blue";
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+ a.style.position="absolute";
+    a.style.top= top + "px";
+    a.style.left=left + "px";
+    a.style.width= width + "px";
+    a.style.height = height + "px";
+    document.body.appendChild(a);
+    
+}
+function addf(a, b, c, top, left, width, height){
+    let fdsa = rands();
+    z(a, top, left+fdsa[0], width, height);
+    z(b, top, left+fdsa[1], width, height);
+    z(c, top, left+fdsa[2], width, height);
+}
+function update(top, left, width, height){
+    let w = randomeight();
+    hinner(w);
+    addf(a[w][0], a[w][1], a[w][2], top, left, width, height);
+    
+}
+document.addEventListener("keypress", function(event){
+switch(event.keyCode){
+    case 49:
+        score += clickone;
+        update(500, 500, 90, 90);
+        break;
+    case 50:
+        score += clicktwo;
+        update(500, 500, 90, 90);
+        break;
+    case 51:
+        score += clickthree;
+        update(500, 500, 90, 90);
+        break;
+    default: 
+        break;
+}
+    console.log(score);
+});
+var thetext = [];
+thetext[0] = [];
+thetext[1] = [];
+thetext[2] = [];
+thetext[3] = [];
+thetext[4] = [];
+thetext[5] = [];
+thetext[6] = [];
+thetext[7] = [];
+
+thetext[0][0] = "";
+thetext[0][1] = "";
+thetext[0][2] = "";
+thetext[1][0] = "";
+thetext[1][1] = "";
+thetext[1][2] = "";
+thetext[2][0] = "";
+thetext[2][1] = "";
+thetext[2][2] = "";
+thetext[3][0] = "";
+thetext[3][1] = "";
+thetext[3][2] = "";
+thetext[4][0] = "";
+thetext[4][1] = "";
+thetext[4][2] = "";
+thetext[5][0] = "";
+thetext[5][1] = "";
+thetext[5][2] = "";
+thetext[6][0] = "";
+thetext[6][1] = "";
+thetext[6][2] = "";
+thetext[7][0] = "";
+thetext[7][1] = "";
+thetext[7][2] = "";
+
+
+function hinner(num){
+    let d = 0;
+     let b = Math.random();
+    if(b<0.333){
+            d = 0;
+        }else{
+            let m = 0;
+        }
+    
+    if(b<0.666){
+        if(b>0.333){
+           d = 1;
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    if(b<1.1){
+        if(b>0.666){
+            d = 2;
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    var thestring = ".";
+    thestring = thetext[num][d];
+    h.innerHTML = thestring;
+     h.style.backgroundColor="blue";
+ let nt = Math.random();
+    if(nt<0.333){
+            h.style.backgroundColor="red";
+        }else{
+            let m = 0;
+        }
+    
+    if(nt<0.666){
+        if(nt>0.333){
+            h.style.backgroundColor="green";
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    if(nt<1.1){
+        if(nt>0.666){
+            h.style.backgroundColor="blue";
+        }else{
+            let m = 0;
+        }
+    }else{
+        let m = 0;
+    }
+    }
+var fdsk = []
+    for(let i =0; i< 8; i++){
+        fdsk[i] = [];
+        for(let j = 0; j<3; j++){
+            fdsk[i][j] = []
+        }
+    }
+    fdsk[0][0][0] = "";
+fdsk[0][1][0] = "";
+fdsk[0][2][0] = "";
+fdsk[1][0][0] = "";
+fdsk[1][1][0] = "";
+fdsk[1][2][0] = "";
+fdsk[2][0][0] = "";
+fdsk[2][1][0] = "";
+fdsk[2][2][0] = "";
+fdsk[3][0][0] = "";
+fdsk[3][1][0] = "";
+fdsk[3][2][0] = "";
+fdsk[4][0][0] = "";
+fdsk[4][1][0] = "";
+fdsk[4][2][0] = "";
+fdsk[5][0][0] = "";
+fdsk[5][1][0] = "";
+fdsk[5][2][0] = "";
+fdsk[6][0][0] = "";
+fdsk[6][1][0] = "";
+fdsk[6][2][0] = "";
+fdsk[7][0][0] = "";
+fdsk[7][1][0] = "";
+fdsk[7][2][0] = "";
+
+fdsk[0][0][1] = "";
+fdsk[0][1][1] = "";
+fdsk[0][2][1] = "";
+fdsk[1][0][1] = "";
+fdsk[1][1][1] = "";
+fdsk[1][2][1] = "";
+fdsk[2][0][1] = "";
+fdsk[2][1][1] = "";
+fdsk[2][2][1] = "";
+fdsk[3][0][1] = "";
+fdsk[3][1][1] = "";
+fdsk[3][2][1] = "";
+fdsk[4][0][1] = "";
+fdsk[4][1][1] = "";
+fdsk[4][2][1] = "";
+fdsk[5][0][1] = "";
+fdsk[5][1][1] = "";
+fdsk[5][2][1] = "";
+fdsk[6][0][1] = "";
+fdsk[6][1][1] = "";
+fdsk[6][2][1] = "";
+fdsk[7][0][1] = "";
+fdsk[7][1][1] = "";
+fdsk[7][2][1] = "";
+
+fdsk[0][0][2] = "";
+fdsk[0][1][2] = "";
+fdsk[0][2][2] = "";
+fdsk[1][0][2] = "";
+fdsk[1][1][2] = "";
+fdsk[1][2][2] = "";
+fdsk[2][0][2] = "";
+fdsk[2][1][2] = "";
+fdsk[2][2][2] = "";
+fdsk[3][0][2] = "";
+fdsk[3][1][2] = "";
+fdsk[3][2][2] = "";
+fdsk[4][0][2] = "";
+fdsk[4][1][2] = "";
+fdsk[4][2][2] = "";
+fdsk[5][0][2] = "";
+fdsk[5][1][2] = "";
+fdsk[5][2][2] = "";
+fdsk[6][0][2] = "";
+fdsk[6][1][2] = "";
+fdsk[6][2][2] = "";
+fdsk[7][0][2] = "";
+fdsk[7][1][2] = "";
+fdsk[7][2][2] = "";
+function fdg(){
+
+
+    for(let i =0; i< 8; i++){
+        for(let j = 0; j<3; j++){
+            a[i][j].innerHTML = fdsk[i][j][random3()];
+        }
+    }
+}
