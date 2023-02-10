@@ -341,6 +341,7 @@ function hinner(num){
  let nt = Math.random();
     if(nt<0.333){
             h.style.backgroundColor="red";
+            h.style.color="green";
         }else{
             let m = 0;
         }
@@ -348,6 +349,7 @@ function hinner(num){
     if(nt<0.666){
         if(nt>0.333){
             h.style.backgroundColor="green";
+            h.style.color="red";
         }else{
             let m = 0;
         }
@@ -357,6 +359,7 @@ function hinner(num){
     if(nt<1.1){
         if(nt>0.666){
             h.style.backgroundColor="blue";
+            h.style.color="orange";
         }else{
             let m = 0;
         }
